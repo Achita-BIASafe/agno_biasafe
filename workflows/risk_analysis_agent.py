@@ -10,8 +10,16 @@ from datetime import datetime, timedelta
 import sys
 import os
 import requests
+import sys
+import os
+
+# Add parent directory to path for api_config import
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+sys.path.insert(0, parent_dir)
+
 from api_config import get_endpoint
-from risk_analyzer import RiskAnalyzer
+from .risk_analyzer import RiskAnalyzer
 
 # Add current directory to path for imports
 current_dir = os.path.dirname(os.path.abspath(__file__))

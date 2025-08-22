@@ -9,6 +9,13 @@ import numpy as np
 import sys
 import os
 import requests
+import sys
+
+# Add parent directory to path for api_config import
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.dirname(current_dir)
+sys.path.insert(0, parent_dir)
+
 from api_config import get_endpoint
 
 # Add current directory to path for imports
